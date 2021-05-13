@@ -111,6 +111,10 @@ public:
     return true;
   }
 
+  bool value(byte x) noexcept {
+    return value(static_cast<uint8_t>(x));
+  }
+
   bool value(bool x) noexcept {
     auto tmp = static_cast<uint8_t>(x);
     return value(tmp);
